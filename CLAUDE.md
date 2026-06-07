@@ -71,6 +71,24 @@ Naming convention: `V{version}__{description}.sql` (e.g. `V1__create_users_table
 
 ## Plans
 
+All implementation plans must be saved to `.claude/plans/`.
+
+**Naming convention:** `YYYY-MM-DD_<prefix>_<feature-slug>.md`
+
+| Prefix | Scope |
+|---|---|
+| `be` | backend |
+| `fe` | frontend |
+| `infra` | infrastructure (Docker, CI, etc.) |
+
+Examples:
+```
+2026-06-07_be_spring-boot.md
+2026-06-10_be_auth-jwt.md
+2026-06-10_fe_auth-login-page.md
+2026-06-15_fe_expense-list.md
+```
+
 By default: use **Opus** model for plan preparation, use **Sonnet** model for plan implementation.
 
 ## Key architectural decisions
