@@ -1,3 +1,19 @@
 {
-  "plansDirectory": ".claude/plans"
+  "plansDirectory": ".claude/plans",
+  "permissions": {
+    "deny": [
+      "Bash(git push:*)"
+    ],
+    "ask": [
+      "Bash(git commit:*)"
+    ],
+    "allow": [
+      "Bash(./mvnw:*)",
+      "Bash(yarn:*)",
+      "Bash(docker compose:*)",
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)"
+    ]
+  }
 }
