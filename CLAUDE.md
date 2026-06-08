@@ -91,6 +91,15 @@ Examples:
 
 By default: use **Opus** model for plan preparation, use **Sonnet** model for plan implementation.
 
+**Important:** plan mode may suggest an auto-generated filename — always rename the file to match the naming convention above before writing content.
+
+## Git workflow
+
+- **Feature branches**: cut a new branch from `main` for every change (features, bugfixes, infra, config, docs); name the branch after the change slug (e.g. `auth-jwt`, `expense-list`, `git-workflow-rules`).
+- **Atomic commits**: commit each completed logical change separately so diffs stay readable in an IDE. Avoid large "WIP" commits.
+- **MR summary**: when a feature is ready, prepare a short bullet-list summary of what the MR delivers. Use `gh pr create` with a `## Summary` section in the body.
+- **No local merge**: never merge an MR locally — merges are performed on the remote (GitHub/GitLab UI or CI).
+
 ## Key architectural decisions
 
 - **Layered architecture**: `controller` → `service` → `repository` → `entity`. DTO-классы отделены от Entity.
