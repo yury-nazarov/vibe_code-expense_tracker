@@ -95,7 +95,7 @@ By default: use **Opus** model for plan preparation, use **Sonnet** model for pl
 
 ## Git workflow
 
-- **Feature branches**: cut a new branch from `main` for every change (features, bugfixes, infra, config, docs); name the branch after the change slug (e.g. `auth-jwt`, `expense-list`, `git-workflow-rules`).
+- **Feature branches**: cut a new branch from `main` for every change (features, bugfixes, infra, config, docs); name the branch after the plan filename without the `.md` extension (e.g. `2026-06-08_infra_git-workflow`, `2026-06-10_be_auth-jwt`).
 - **Atomic commits**: commit each completed logical change separately so diffs stay readable in an IDE. Avoid large "WIP" commits.
 - **MR summary**: when a feature is ready, prepare a short bullet-list summary of what the MR delivers. Use `gh pr create` with a `## Summary` section in the body.
 - **No local merge**: never merge an MR locally — merges are performed on the remote (GitHub/GitLab UI or CI).
